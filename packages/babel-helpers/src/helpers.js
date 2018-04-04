@@ -434,7 +434,7 @@ helpers.construct = () => template.program.ast`
   import setPrototypeOf from "setPrototypeOf";
 
   export default function _construct(Parent, args, Class) {
-    if (typeof Reflect !== "undefined" && Reflect.construct) {
+    if (typeof Reflect !== "undefined" && Reflect.construct && !Reflect.construct.sham) {
       _construct = Reflect.construct;
     } else {
       _construct = function _construct(Parent, args, Class) {

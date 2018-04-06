@@ -1,4 +1,4 @@
-import "core-js/modules/es7.symbol.async-iterator";
+import "core-js/modules/web.dom-collections.iterator";
 Array.from; // static method
 
 Map; // built-in

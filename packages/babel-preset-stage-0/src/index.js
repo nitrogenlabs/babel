@@ -6,7 +6,7 @@ import transformFunctionBind from "@babel/plugin-proposal-function-bind";
 export default declare((api, opts = {}) => {
   api.assertVersion(7);
 
-  const { loose = false, useBuiltIns = false, decoratorsLegacy = false } = opts;
+  const { loose = false, useBuiltIns = false, decoratorsLegacy = true } = opts;
 
   if (typeof loose !== "boolean") {
     throw new Error("@babel/preset-stage-0 'loose' option must be a boolean.");

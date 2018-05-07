@@ -1,19 +1,21 @@
-# @babel/preset-stage-0
+# @nlabs/preset-stage-0
 
 > Babel preset for stage 0 plugins
 
-See our website [@babel/preset-stage-0](https://new.babeljs.io/docs/en/next/babel-preset-stage-0.html) for more information.
+See the babel website [@babel/preset-stage-0](https://new.babeljs.io/docs/en/next/babel-preset-stage-0.html) for more information.
+
+***Note:** In the @nlabs version, decoratorsLegacy has been defaulted to true.*
 
 ## Install
 
 Using npm:
 
 ```sh
-npm install --save @babel/preset-stage-0
+npm install --save @nlabs/preset-stage-0
 ```
 
 or using yarn:
 
 ```sh
-yarn add --save @babel/preset-stage-0
+yarn add --save @nlabs/preset-stage-0
 ```

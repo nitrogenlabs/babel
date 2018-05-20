@@ -1,6 +1,6 @@
 MAKEFLAGS = -j1
-FLOW_COMMIT = f193e19cf2185006ea9139bb0e71f31ea93e7b72
-TEST262_COMMIT = 52f70e2f637731aae92a9c9a2d831310c3ab2e1e
+FLOW_COMMIT = 395e045c18d537fcbbc552a96ef2cdcd70b4ab52
+TEST262_COMMIT = 40883f4c6ae17e073dfd03e34f73a6bf8c855595
 
 # Fix color output until TravisCI fixes https://github.com/travis-ci/travis-ci/issues/7967
 export FORCE_COLOR = true
@@ -87,12 +87,12 @@ bootstrap-flow:
 	cd build/flow && git checkout $(FLOW_COMMIT)
 
 test-flow:
-	node scripts/tests/flow/run_babylon_flow_tests.js
+	node scripts/tests/flow/run_babel_parser_flow_tests.js
 
 test-flow-ci: bootstrap test-flow
 
 test-flow-update-whitelist:
-	node scripts/tests/flow/run_babylon_flow_tests.js --update-whitelist
+	node scripts/tests/flow/run_babel_parser_flow_tests.js --update-whitelist
 
 bootstrap-test262:
 	rm -rf ./build/test262
@@ -101,12 +101,12 @@ bootstrap-test262:
 	cd build/test262 && git checkout $(TEST262_COMMIT)
 
 test-test262:
-	node scripts/tests/test262/run_babylon_test262.js
+	node scripts/tests/test262/run_babel_parser_test262.js
 
 test-test262-ci: bootstrap test-test262
 
 test-test262-update-whitelist:
-	node scripts/tests/test262/run_babylon_test262.js --update-whitelist
+	node scripts/tests/test262/run_babel_parser_test262.js --update-whitelist
 
 publish:
 	git pull --rebase

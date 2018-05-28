@@ -27,6 +27,7 @@
       }
     },
     "sourceType": "module",
+    "interpreter": null,
     "body": [
       {
         "type": "VariableDeclaration",
@@ -135,6 +136,7 @@
                         "name": "x"
                       },
                       "static": false,
+                      "proto": false,
                       "kind": "init",
                       "method": false,
                       "value": {
@@ -187,6 +189,7 @@
                         "name": "y"
                       },
                       "static": false,
+                      "proto": false,
                       "kind": "init",
                       "method": false,
                       "value": {
@@ -452,6 +455,7 @@
                         "name": "x"
                       },
                       "static": false,
+                      "proto": false,
                       "kind": "init",
                       "method": false,
                       "value": {
@@ -504,6 +508,7 @@
                         "name": "y"
                       },
                       "static": false,
+                      "proto": false,
                       "kind": "init",
                       "method": false,
                       "value": {
@@ -870,6 +875,7 @@
                         "name": "a"
                       },
                       "static": false,
+                      "proto": false,
                       "kind": "init",
                       "method": false,
                       "value": {
@@ -920,6 +926,7 @@
                               "name": "x"
                             },
                             "static": false,
+                            "proto": false,
                             "kind": "init",
                             "method": false,
                             "value": {
@@ -972,6 +979,7 @@
                               "name": "y"
                             },
                             "static": false,
+                            "proto": false,
                             "kind": "init",
                             "method": false,
                             "value": {
@@ -1032,6 +1040,7 @@
                         "name": "b"
                       },
                       "static": false,
+                      "proto": false,
                       "kind": "init",
                       "method": false,
                       "value": {
@@ -1400,6 +1409,7 @@
                         "name": "a"
                       },
                       "static": false,
+                      "proto": false,
                       "kind": "init",
                       "method": false,
                       "value": {
@@ -1450,6 +1460,7 @@
                               "name": "x"
                             },
                             "static": false,
+                            "proto": false,
                             "kind": "init",
                             "method": false,
                             "value": {
@@ -1502,6 +1513,7 @@
                               "name": "y"
                             },
                             "static": false,
+                            "proto": false,
                             "kind": "init",
                             "method": false,
                             "value": {
@@ -1562,6 +1574,7 @@
                         "name": "b"
                       },
                       "static": false,
+                      "proto": false,
                       "kind": "init",
                       "method": false,
                       "value": {

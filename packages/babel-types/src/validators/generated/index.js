@@ -47,6 +47,20 @@ export function isBinaryExpression(node: Object, opts?: Object): boolean {
 
   return false;
 }
+export function isInterpreterDirective(node: Object, opts?: Object): boolean {
+  if (!node) return false;
+
+  const nodeType = node.type;
+  if (nodeType === "InterpreterDirective") {
+    if (typeof opts === "undefined") {
+      return true;
+    } else {
+      return shallowEqual(node, opts);
+    }
+  }
+
+  return false;
+}
 export function isDirective(node: Object, opts?: Object): boolean {
   if (!node) return false;
 
@@ -2232,6 +2246,20 @@ export function isPrivateName(node: Object, opts?: Object): boolean {
 
   return false;
 }
+export function isBigIntLiteral(node: Object, opts?: Object): boolean {
+  if (!node) return false;
+
+  const nodeType = node.type;
+  if (nodeType === "BigIntLiteral") {
+    if (typeof opts === "undefined") {
+      return true;
+    } else {
+      return shallowEqual(node, opts);
+    }
+  }
+
+  return false;
+}
 export function isTSParameterProperty(node: Object, opts?: Object): boolean {
   if (!node) return false;
 
@@ -3083,6 +3111,7 @@ export function isExpression(node: Object, opts?: Object): boolean {
     "OptionalCallExpression" === nodeType ||
     "Import" === nodeType ||
     "DoExpression" === nodeType ||
+    "BigIntLiteral" === nodeType ||
     "TSAsExpression" === nodeType ||
     "TSTypeAssertion" === nodeType ||
     "TSNonNullExpression" === nodeType
@@ -3467,7 +3496,8 @@ export function isPureish(node: Object, opts?: Object): boolean {
     "BooleanLiteral" === nodeType ||
     "ArrowFunctionExpression" === nodeType ||
     "ClassDeclaration" === nodeType ||
-    "ClassExpression" === nodeType
+    "ClassExpression" === nodeType ||
+    "BigIntLiteral" === nodeType
   ) {
     if (typeof opts === "undefined") {
       return true;
@@ -3592,7 +3622,8 @@ export function isLiteral(node: Object, opts?: Object): boolean {
     "NullLiteral" === nodeType ||
     "BooleanLiteral" === nodeType ||
     "RegExpLiteral" === nodeType ||
-    "TemplateLiteral" === nodeType
+    "TemplateLiteral" === nodeType ||
+    "BigIntLiteral" === nodeType
   ) {
     if (typeof opts === "undefined") {
       return true;
@@ -3622,7 +3653,8 @@ export function isImmutable(node: Object, opts?: Object): boolean {
     "JSXText" === nodeType ||
     "JSXFragment" === nodeType ||
     "JSXOpeningFragment" === nodeType ||
-    "JSXClosingFragment" === nodeType
+    "JSXClosingFragment" === nodeType ||
+    "BigIntLiteral" === nodeType
   ) {
     if (typeof opts === "undefined") {
       return true;

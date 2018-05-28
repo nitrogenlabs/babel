@@ -97,7 +97,7 @@ AST for JSX code is based on [Facebook JSX AST][].
 
 ### Semver
 
-The Bael Parser follows semver in most situations. The only thing to note is that some spec-compliancy bug fixes may be released under patch versions.
+The Babel Parser follows semver in most situations. The only thing to note is that some spec-compliancy bug fixes may be released under patch versions.
 
 For example: We push a fix to early error on something like [#107](https://github.com/babel/babylon/pull/107) - multiple default exports per file. That would be considered a bug fix even though it would cause a build to fail.
 
@@ -127,7 +127,7 @@ require("@babel/parser").parse("code", {
 | `typescript` ([repo](https://github.com/Microsoft/TypeScript)) | `var a: string = "";` |
 | `doExpressions` | `var a = do { if (true) { 'hi'; } };` |
 | `objectRestSpread` ([proposal](https://github.com/tc39/proposal-object-rest-spread)) | `var a = { b, ...c };` |
-| `decorators` (Stage 1) and `decorators2` (Stage 2 [proposal](https://github.com/tc39/proposal-decorators)) | `@a class A {}` |
+| `decorators` (Stage 2 [proposal](https://github.com/tc39/proposal-decorators)) and `decorators-legacy` (Stage 1) | `@a class A {}` |
 | `classProperties` ([proposal](https://github.com/tc39/proposal-class-public-fields)) | `class A { b = 1; }` |
 | `classPrivateProperties` ([proposal](https://github.com/tc39/proposal-private-fields)) | `class A { #b = 1; }` |
 | `classPrivateMethods` ([proposal](https://github.com/tc39/proposal-private-methods)) | `class A { #c() {} }` |
@@ -145,6 +145,25 @@ require("@babel/parser").parse("code", {
 | `throwExpressions` ([proposal](https://github.com/babel/proposals/issues/23)) | `() => throw new Error("")` |
 | `pipelineOperator` ([proposal](https://github.com/babel/proposals/issues/29)) | `a \|> b` |
 | `nullishCoalescingOperator` ([proposal](https://github.com/babel/proposals/issues/14)) | `a ?? b` |
+
+
+#### Plugins options
+
+> NOTE: When a plugin is specified multiple times, only the first options are considered.
+
+- `decorators`:
+  - `decoratorsBeforeExport` (`boolean`)
+    ```js
+    // decoratorsBeforeExport: true
+    @dec
+    export class C {}
+
+    // decoratorsBeforeExport: false
+    export @dec class C {}
+    ```
+- `flow`:
+  - `all` (`boolean`)
+    <!-- TODO -->
 
 ### FAQ
 

@@ -17,6 +17,10 @@ export function BinaryExpression(...args: Array<any>): Object {
   return builder("BinaryExpression", ...args);
 }
 export { BinaryExpression as binaryExpression };
+export function InterpreterDirective(...args: Array<any>): Object {
+  return builder("InterpreterDirective", ...args);
+}
+export { InterpreterDirective as interpreterDirective };
 export function Directive(...args: Array<any>): Object {
   return builder("Directive", ...args);
 }
@@ -640,6 +644,10 @@ export function PrivateName(...args: Array<any>): Object {
   return builder("PrivateName", ...args);
 }
 export { PrivateName as privateName };
+export function BigIntLiteral(...args: Array<any>): Object {
+  return builder("BigIntLiteral", ...args);
+}
+export { BigIntLiteral as bigIntLiteral };
 export function TSParameterProperty(...args: Array<any>): Object {
   return builder("TSParameterProperty", ...args);
 }

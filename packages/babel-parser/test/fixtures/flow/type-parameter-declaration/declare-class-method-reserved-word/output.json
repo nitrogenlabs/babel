@@ -27,6 +27,7 @@
       }
     },
     "sourceType": "module",
+    "interpreter": null,
     "body": [
       {
         "type": "DeclareClass",
@@ -111,6 +112,7 @@
                 "name": "foobar"
               },
               "static": false,
+              "proto": false,
               "kind": "init",
               "method": true,
               "value": {
@@ -213,6 +215,7 @@
                 "name": "delete"
               },
               "static": false,
+              "proto": false,
               "kind": "init",
               "method": true,
               "value": {
@@ -315,6 +318,7 @@
                 "name": "yield"
               },
               "static": false,
+              "proto": false,
               "kind": "init",
               "method": true,
               "value": {
@@ -417,6 +421,7 @@
                 "name": "do"
               },
               "static": false,
+              "proto": false,
               "kind": "init",
               "method": true,
               "value": {
@@ -519,6 +524,7 @@
                 "name": "foobar"
               },
               "static": true,
+              "proto": false,
               "kind": "init",
               "method": true,
               "value": {
@@ -621,6 +627,7 @@
                 "name": "delete"
               },
               "static": true,
+              "proto": false,
               "kind": "init",
               "method": true,
               "value": {
@@ -723,6 +730,7 @@
                 "name": "yield"
               },
               "static": true,
+              "proto": false,
               "kind": "init",
               "method": true,
               "value": {
@@ -825,6 +833,7 @@
                 "name": "do"
               },
               "static": true,
+              "proto": false,
               "kind": "init",
               "method": true,
               "value": {

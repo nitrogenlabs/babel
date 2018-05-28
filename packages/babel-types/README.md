@@ -125,6 +125,19 @@ Aliases: `Expression`, `Terminatorless`
 
 ---
 
+### bigIntLiteral
+```javascript
+t.bigIntLiteral(value)
+```
+
+See also `t.isBigIntLiteral(node, opts)` and `t.assertBigIntLiteral(node, opts)`.
+
+Aliases: `Expression`, `Pureish`, `Literal`, `Immutable`
+
+ - `value`: `string` (required)
+
+---
+
 ### binaryExpression
 ```javascript
 t.binaryExpression(operator, left, right)
@@ -1076,6 +1089,17 @@ Aliases: `Flow`, `FlowType`
 
 ---
 
+### interpreterDirective
+```javascript
+t.interpreterDirective(value)
+```
+
+See also `t.isInterpreterDirective(node, opts)` and `t.assertInterpreterDirective(node, opts)`.
+
+ - `value`: `string` (required)
+
+---
+
 ### intersectionTypeAnnotation
 ```javascript
 t.intersectionTypeAnnotation(types)
@@ -1610,6 +1634,7 @@ Aliases: `Flow`, `UserWhitespacable`
  - `variance`: `Variance` (default: `null`)
  - `kind`: `"init" | "get" | "set"` (default: `null`)
  - `optional`: `boolean` (default: `null`)
+ - `proto`: `boolean` (default: `null`)
  - `static`: `boolean` (default: `null`)
 
 ---
@@ -1704,7 +1729,7 @@ Aliases: `Private`
 
 ### program
 ```javascript
-t.program(body, directives, sourceType)
+t.program(body, directives, sourceType, interpreter)
 ```
 
 See also `t.isProgram(node, opts)` and `t.assertProgram(node, opts)`.
@@ -1714,6 +1739,7 @@ Aliases: `Scopable`, `BlockParent`, `Block`
  - `body`: `Array<Statement>` (required)
  - `directives`: `Array<Directive>` (default: `[]`)
  - `sourceType`: `"script" | "module"` (default: `'script'`)
+ - `interpreter`: `InterpreterDirective` (default: `null`)
  - `sourceFile`: `string` (default: `null`)
 
 ---

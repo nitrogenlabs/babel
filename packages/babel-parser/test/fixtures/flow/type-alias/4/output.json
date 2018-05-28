@@ -27,6 +27,7 @@
       }
     },
     "sourceType": "module",
+    "interpreter": null,
     "body": [
       {
         "type": "TypeAlias",
@@ -123,6 +124,7 @@
                     "name": "type"
                   },
                   "static": false,
+                  "proto": false,
                   "kind": "init",
                   "method": false,
                   "value": {
@@ -201,6 +203,7 @@
                     "name": "type"
                   },
                   "static": false,
+                  "proto": false,
                   "kind": "init",
                   "method": false,
                   "value": {
@@ -528,6 +531,7 @@
                 "name": "x"
               },
               "static": false,
+              "proto": false,
               "kind": "init",
               "method": false,
               "value": {
@@ -593,6 +597,7 @@
                           "name": "type"
                         },
                         "static": false,
+                        "proto": false,
                         "kind": "init",
                         "method": false,
                         "value": {
@@ -671,6 +676,7 @@
                           "name": "type"
                         },
                         "static": false,
+                        "proto": false,
                         "kind": "init",
                         "method": false,
                         "value": {
@@ -792,6 +798,7 @@
                 "name": "x"
               },
               "static": false,
+              "proto": false,
               "kind": "init",
               "method": false,
               "value": {
@@ -857,6 +864,7 @@
                           "name": "type"
                         },
                         "static": false,
+                        "proto": false,
                         "kind": "init",
                         "method": false,
                         "value": {
@@ -935,6 +943,7 @@
                           "name": "type"
                         },
                         "static": false,
+                        "proto": false,
                         "kind": "init",
                         "method": false,
                         "value": {

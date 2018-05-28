@@ -27,6 +27,12 @@ export function assertAssignmentExpression(
 export function assertBinaryExpression(node: Object, opts?: Object = {}): void {
   assert("BinaryExpression", node, opts);
 }
+export function assertInterpreterDirective(
+  node: Object,
+  opts?: Object = {},
+): void {
+  assert("InterpreterDirective", node, opts);
+}
 export function assertDirective(node: Object, opts?: Object = {}): void {
   assert("Directive", node, opts);
 }
@@ -704,6 +710,9 @@ export function assertExportNamespaceSpecifier(
 }
 export function assertPrivateName(node: Object, opts?: Object = {}): void {
   assert("PrivateName", node, opts);
+}
+export function assertBigIntLiteral(node: Object, opts?: Object = {}): void {
+  assert("BigIntLiteral", node, opts);
 }
 export function assertTSParameterProperty(
   node: Object,
